@@ -11,9 +11,7 @@ int main() {
     formatChunk format;
     dataChunk data;
 
-    // File name variables as string
     std::string fileName;
-    // User input for file to open
     std::cout << "What file would you like to look at?\n"
                 << "(Please format it as my_file.wav): ";
     std::cin >> fileName;
@@ -24,7 +22,6 @@ int main() {
      *  Do this if you want to process audio to another WAV file
      *  Cannot do real time processing with this
      */
-
     //std::ofstream outFile("output.wav", std::ios::binary);
 
     if (!inFile.is_open()) {
@@ -56,11 +53,7 @@ int main() {
     std::cout << "Sub chunk 2 ID: " << std::string (data.subChunk2Id, 4) << "\n";
     std::cout << "Sub chunk 2 size: " << data.subChunk2Size << "\n\n";
 
-
-    /*
-     * Validate WAV header
-    */
-
+    //Validate WAV header
     bool valid = true;
 
     if (std::string(riff.chunkID) != "RIFF") {
