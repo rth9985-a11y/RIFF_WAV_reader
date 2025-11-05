@@ -1,12 +1,8 @@
-//
-// Created by Reese Hsu on 10/2/25.
-//
 #pragma once
 #include <cstdint>
 
 #pragma pack(push, 1)
-struct riffChunk {
-    //Similar to a class but everything is public essentially just made a custom data type
+struct riffChunk {   
     //"RIFF" chunk
     char chunkID[4];
     uint32_t chunkSize;
